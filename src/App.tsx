@@ -11,20 +11,20 @@ function App() {
   const renderCurrentPage = () => {
     switch (currentPage) {
       case 'home':
-        // MODIFIED: Pass setCurrentPage to HomePage
+        // MODIFIED: Pass setCurrentPage down to the HomePage component
         return <HomePage setCurrentPage={setCurrentPage} />;
       case 'species':
         return <SpeciesListPage />;
       case 'classify':
         return <ClassifyPage />;
       default:
-        // MODIFIED: Pass setCurrentPage to HomePage here as well
+        // MODIFIED: Pass setCurrentPage here as well for the default case
         return <HomePage setCurrentPage={setCurrentPage} />;
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-50">
+    <div className="min-h-screen bg-slate-900">
       <Sidebar 
         currentPage={currentPage} 
         setCurrentPage={setCurrentPage}
